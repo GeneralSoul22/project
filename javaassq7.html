@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>pincode validation</title>
+    <script>
+        function validatepincode(){
+            var pincode=document.getElementById("pincode").value;
+            var pincodepattern=/^[1-9][0-9]{5}$/;
+            var message="";
+            if(pincode===""){
+                message="Pincode field is empty";
+            }
+            else if(!pincodepattern.test(pincode)){
+                message="Pincode contain atleast 6-digit";
+            }
+            else{
+                message1="valid pincode";
+            }
+            document.getElementById("validationMessage").textContent=message;
+            document.getElementById("validationMessage").style.color="red";
+
+            document.getElementById("validationMessage").textContent=message1;
+            document.getElementById("validationMessage").style.color="green";
+        }
+    </script>
+</head>
+<body>
+    <h1>PINCODE VALIDATION</h1>
+    <form onsubmit="event.preventDefault(); validatepincode();">
+        <label for="pincode">ENTER PINCODE</label>
+        <input type="text" id="pincode" name="pincode">
+        <button type="submit">submit</button>
+    </form>
+    <p id="validationMessage"></p>
+</body>
+</html>

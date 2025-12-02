@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<prod_info>
+
+<prod_detail>
+<prod_no>001</prod_no>
+<prod_name>udh-al-jaha</prod_name>
+<mfg_date>9-24</mfg_date>
+<exp_date>15-29</exp_date>
+</prod_detail>
+<prod_detail>
+<prod_no>002</prod_no>
+<prod_name>al-alif</prod_name>
+<mfg_date>15-20</mfg_date>
+<exp_date>29-31</exp_date>
+</prod_detail>
+<prod_detail>
+<prod_no>003</prod_no>
+<prod_name>sandal</prod_name>
+<mfg_date>9-20</mfg_date>
+<exp_date>15-25</exp_date>
+</prod_detail>
+
+</prod_info>

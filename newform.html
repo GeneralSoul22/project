@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>booking form</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+                function validateEmail(){
+                    var email=document.getElementById("email").value;
+                    var emailpattern=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                    var message="";
+                    if(email===""){
+                        message="email field is empty";
+                    }
+                    else if(!emailpattern.test(email)){
+                        message="Invalid email address";
+                    }
+                    else{
+                        message1="valid email address";
+                    }
+                    document.getElementById("validationMessage").textContent=message;
+                    document.getElementById("validationMessage").style.color="red";
+        
+                    document.getElementById("validationMessage").textContent=message1;
+                    document.getElementById("validationMessage").style.color="green";
+                }
+            </script>
+    </head>
+    <body>
+        <div class="box">
+            <span class="borderline"></span>
+            <form action="home.html"  >
+                <table>
+                    <td>
+                    <tr><h2>ENTER YOUR DETAILS</h2></tr>
+                    </td><br><br>
+                
+                    <tr>
+                    <td><label>Enter Name</label></td>
+                    <td><input type="text" placeholder="enter your name"required="required"></td>
+                    <i></i>
+                    </tr>
+                
+                
+                    <tr>
+                    <td><label>Enter Age</label></td>
+                    <td><input type="age" placeholder="enter your age" required="required"></td>
+                    <i></i>
+                    </tr>
+                    <tr>
+                        <td><label>Enter Number</label></td>
+                        <td><input type="number" placeholder="enter your no." maxlength="10" ></td>
+                        <i></i>
+                        </tr>
+                
+                    <tr>
+                            <tr>
+                                    <td><label>Enter Email Id</label></td>
+                                    <td><input type="email" placeholder="enter your email" id="email" name="email"></td>
+                                    <i></i>
+                                    </tr>
+                            
+                                <tr>
+                                        <tr>
+                                                <td><label>Enter your address</label></td>
+                                                <td><textarea id="txt" cols="30" rows="2"></textarea></td>
+                                                <i></i>
+                                                </tr>
+                                        
+                                            <tr>
+                    <td><label>select book</label></td>
+                    <td><select name="books">
+                        <option> SELECT </option>
+                        <option> economics </option>
+                        <option> science </option>
+                        <option> social science </option>
+                        <option> oc </option>
+                        <option> maths </option>
+                        <option> Others </option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                    <td><label> PAYMENT:</label></td>
+                    <td><br>
+                    <input type="radio" name="p" value="n"> NET BANKING<br>
+                    <input type="radio" name="p" value="c"> CASH ON DELIVERY<br>
+                    <input type="radio" name="p" value="u"> UPI
+                    </td>
+                    </tr>
+                </table>
+                    <div class="links">
+                        <a href="#">forgot pass</a>
+                        <a href="#">sign up</a>
+                    </div>
+                <input type="submit" value="payment" onsubmit="event.preventDefault(); validateEmail();">
+                <input type="reset" value="reset">
+            
+                
+            </form>
+        </div>
+    </body>
+</html>
